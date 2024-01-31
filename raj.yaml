@@ -19,7 +19,7 @@ kind: Service
 metadata: 
   name: raj-svc
 spec: 
-  seletor:
+  selector:
     app: raj-1
   ports:
     - protocol: TCP
