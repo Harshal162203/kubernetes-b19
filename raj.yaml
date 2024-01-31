@@ -8,7 +8,7 @@ metadata:
 spec: 
   containers:
     - name : raj-container
-      image: httpd
+      image: tomcat
       ports:
         - containerPort: 80
 ...
