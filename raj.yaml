@@ -18,7 +18,8 @@ apiVersion: v1
 kind: Service
 metadata: 
   name: raj-svc
-  labels:
+spec: 
+  selcetor:
     app: raj-1
   ports:
     - protocol: TCP
