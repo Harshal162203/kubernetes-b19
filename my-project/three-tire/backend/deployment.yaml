@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  lebels:
+    app: backend
+spec: 
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backed
+          image: 
+          ports:
+            - containerPort: 8080
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  strategy: 
+    type: RollingUpdate
