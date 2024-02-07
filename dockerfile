@@ -1,5 +1,5 @@
 FROM httpd
-RUN mkdir /var/www/html/mobile/index.html
-echo "<h1> Mobile Page </h1> " > /var/www/html/mobile/index.html
+RUN mkdir -p /var/www/html/laptop/index.html
+RUN echo " Mobile Page " /var/www/html/laptop/index.html
 
 CMD ["httpd","DFOREGROUND"]
