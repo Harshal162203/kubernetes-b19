@@ -2,9 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata: 
   name: my-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
+  defaultBackend:
+    service:
+      name: laptop-svc
+      port:
+        number: 80
   rules:
+    - host: "a5e3cb116ce5d481794dc3535eab4c93-422dec531acdcdbd.elb.eu-west-3.amazonaws.com"
       http:
         paths:
         - path: /mobile
