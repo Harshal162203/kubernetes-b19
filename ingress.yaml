@@ -2,15 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata: 
   name: my-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
-  defaultBackend:
-    service:
-      name: laptop-svc
-      port:
-        number: 80
   rules:
       http:
         paths:
